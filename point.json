@@ -1,0 +1,122 @@
+[
+  {
+	"id_point": "1",
+    "id_kota": "2",
+    "nama_point": "Adda Swalayan Bogor",
+    "lat": "-6.606463",
+    "lng": "106.809952",
+    "alamat": "Pos, Bogor 16143"
+  },
+  {
+	"id_point": "2",
+    "id_kota": "2",
+    "nama_point": "Agen Gunung Putri",
+    "lat": "-6.320682",
+    "lng": "106.970100",
+    "alamat": "Jalan Vila Nusa Indah Utama, Gunung Putri"
+  },
+  {
+	"id_point": "3",
+    "id_kota": "2",
+    "nama_point": "Agen Cinere",
+    "lat": "-6.329148",
+    "lng": "106.783409",
+    "alamat": "Jalan Cinere Raya, Depok"
+  },
+  {
+	"id_point": "4",
+    "id_kota": "2",
+    "nama_point": "Agen Cinere",
+    "lat": "-6.320682",
+    "lng": "106.970100",
+    "alamat": "Jalan Vila Nusa Indah Utama, Gunung Putri"
+  },
+  {
+	"id_point": "5",
+    "id_kota": "2",
+    "nama_point": "Agen Limo Oky",
+    "lat": "-6.360603",
+    "lng": "106.776466",
+    "alamat": "Jalan Guntur, Limo, Depok, West Java 16514"
+  },
+  {
+	"id_point": "6",
+    "id_kota": "2",
+    "nama_point": "Agen Limo Achmad",
+    "lat": "-6.373768",
+    "lng": "106.777908",
+    "alamat": "Jalan Meruyung Raya, Depok"
+  },
+  {
+	"id_point": "7",
+    "id_kota": "2",
+    "nama_point": "Agen Gunung Putri",
+    "lat": "-6.320682",
+    "lng": "106.970100",
+    "alamat": "Jalan Vila Nusa Indah Utama, Gunung Putri"
+  },
+  {
+	"id_point": "8",
+    "id_kota": "3",
+    "nama_point": "Alex Pademangan",
+    "lat": "-6.139832",
+    "lng": "106.844200",
+    "alamat": "Jalan Pademangan 2, Jakarta Capital Region 14420"
+  },
+  {
+	"id_point": "9",
+    "id_kota": "3",
+    "nama_point": "Alex Bendungan Jago",
+    "lat": "-6.161305",
+    "lng": "106.856926",
+    "alamat": "Jalan Bendungan Jago No.109C, Kemayoran, Central Jakarta City, Jakarta 10650, Republic of Indonesia"
+  },
+  {
+	"id_point": "10",
+    "id_kota": "3",
+    "nama_point": "Alex Sunter Indah",
+    "lat": "-6.138537",
+    "lng": "106.866753",
+    "alamat": "Jalan Sunter Garden, Jakarta Capital Region 14350"
+  },
+  {
+	"id_point": "11",
+    "id_kota": "4",
+    "nama_point": "Alex Poltangan 1",
+    "lat": "-6.296978",
+    "lng": "106.844963",
+    "alamat": "Jalan Poltangan 27, South Jakarta 12510"
+  },
+  {
+	"id_point": "12",
+    "id_kota": "4",
+    "nama_point": "Alex Poltangan 2",
+    "lat": "-6.297617",
+    "lng": "106.848763",
+    "alamat": "Jalan Poltangan, Jakarta Capital Region 12520"
+  },
+  {
+	"id_point": "13",
+    "id_kota": "4",
+    "nama_point": "Alex Raya Condet",
+    "lat": "-6.268065",
+    "lng": "106.859680",
+    "alamat": "Jalan Buluh, Jakarta 12510"
+  },
+  {
+	"id_point": "14",
+    "id_kota": "3",
+    "nama_point": "Alex Cempaka Putih",
+    "lat": "-6.173282",
+    "lng": "106.860146",
+    "alamat": "Jalan Letnan Jenderal Suprapto, Jakarta Capital Region 10540"
+  },
+  {
+	"id_point": "15",
+    "id_kota": "3",
+    "nama_point": "Alex Cempaka Mas",
+    "lat": "-6.162873",
+    "lng": "106.875641",
+    "alamat": "Jalan Sunter Kemayoran No.3, Tanjung Priok, North Jakarta City, Jakarta 10640, Republic of Indonesia"
+  }
+]

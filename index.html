@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Gmaps Demo</title>
+    <style>
+		html, body {
+			height: 100%;
+			margin: 0;
+			padding: 0;
+		}
+        #map {
+            height: 100%;
+            width: 100%;
+        }
+		.fieldset {
+			position: fixed;
+			top: 10px;
+			left: 45%;
+		}
+    </style>
+
+</head>
+
+<body style="margin:0;">
+
+    <!-- <h3>My Google Maps Demo</h3> -->
+    <div id="map"></div>
+    <div class="fieldset">
+        <select id="pilih_kota" onchange="initialize_map()">
+            <option value="2" selected>Jakarta</option>
+            <option value="3">Depok</option>
+            <option value="4">Tangerang</option>
+        </select>
+
+        <a href="place_direction.html">Distance, Place & Direction Gmaps</a>
+    </div>
+
+    <!-- gmaps addo -->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyB22j4zIaMvCOrUjg3zvo17UEMF0jVxdKM&callback=initialize_map"></script> -->
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC09yhDdg6L1ErTNoe0Dy8mKllbC1wiMi4&callback=initialize_map"></script>
+
+    <!-- gmaps invision -->
+    <!-- <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHub4o6mDPIcNdVGyJautqp1mme8GJ83A&callback=initialize_map"></script> -->
+
+    <script src="load_map.js"></script>
+</body>
+
+</html>

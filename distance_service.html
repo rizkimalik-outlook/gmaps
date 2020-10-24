@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Distance Matrix Service</title>
+    <style>
+        #map {
+            height: calc(100vh - 250px);
+            width: 100%;
+        }
+    </style>
+</head>
+
+<body>
+    <center>
+        <h3>My Google Maps Demo</h3>
+        <select id="id_point1" onchange="">
+            <option value="-6.320682,106.970100" selected>Agen Gunung Putri</option>
+            <option value="-6.329148,106.783409">Agen Cinere</option>
+            <option value="-6.360603,106.776466">Agen Limo Oky</option>
+        </select>
+
+        <select id="id_point2" onchange="">
+            <option value="-6.320682,106.970100" selected>Agen Gunung Putri</option>
+            <option value="-6.329148,106.783409">Agen Cinere</option>
+            <option value="-6.360603,106.776466">Agen Limo Oky</option>
+        </select>
+        <button id="hitung" onclick="initMap()">Hitung</button>
+        <br>
+        <br>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>From</th>
+                    <th>To</th>
+                    <th>Distance</th>
+                </tr>
+            </thead>
+
+            <tbody id="table_result"></tbody>
+        </table>
+		<br>
+		
+        <div id="map"></div>
+    </center>
+
+
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC09yhDdg6L1ErTNoe0Dy8mKllbC1wiMi4&libraries=places&callback=initMap">
+    </script>
+    <script src="distance_service.js"></script>
+</body>
+
+</html>
