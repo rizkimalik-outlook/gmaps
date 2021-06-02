@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Waypoints in Directions</title>
+    <!-- <script src="https://polyfill.io/v3/polyfill.min.js?features=default"></script> -->
+    <style type="text/css">
+      #right-panel {
+        font-family: "Roboto", "sans-serif";
+        line-height: 30px;
+        padding-left: 10px;
+      }
+
+      #right-panel select,
+      #right-panel input {
+        font-size: 15px;
+      }
+
+      #right-panel select {
+        width: 100%;
+      }
+
+      #right-panel i {
+        font-size: 12px;
+      }
+
+      html,
+      body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+      }
+
+      #map {
+        height: 100%;
+        float: left;
+        width: 70%;
+        height: 100%;
+      }
+
+      #right-panel {
+        margin: 20px;
+        border-width: 2px;
+        width: 20%;
+        height: 400px;
+        float: left;
+        text-align: left;
+        padding-top: 0;
+      }
+
+      #directions-panel {
+        margin-top: 10px;
+        background-color: #ffee77;
+        padding: 10px;
+        overflow: scroll;
+        height: 600px;
+      }
+    </style>
+    <script>
+      function initMap() {
+        const directionsService = new google.maps.DirectionsService();
+        const directionsRenderer = new google.maps.DirectionsRenderer();
+        const map = new google.maps.Map(document.getElementById("map"), {
+          zoom: 12,
+          center: { lat: -6.1901425, lng: 106.8668091 },
+        });
+        directionsRenderer.setMap(map);
+        document.getElementById("submit").addEventListener("click", () => {
+          calculateAndDisplayRoute(directionsService, directionsRenderer);
+        });
+      }
+
+      function calculateAndDisplayRoute(directionsService, directionsRenderer) {
+      
+        const data_array = [
+          {
+            "location": "Pos, Bogor 16143"
+          },
+          {
+            "location": "Jalan Vila Nusa Indah Utama, Gunung Putri"
+          },
+          {
+            "location": "Jalan Guntur, Limo, Depok, West Java 16514"
+          },
+          {
+            "location": "Jalan Meruyung Raya, Depok"
+          }
+        ];
+
+        const waypts_push = [];
+        for (let i = 0; i < data_array.length; i++) {
+          waypts_push.push({
+            location: data_array[i].location,
+            stopover: true,
+          });
+        }
+        const waypts = waypts_push.slice(1, -1); //middle data
+
+        directionsService.route(
+          {
+            origin: data_array[0].location, //start data
+            destination: data_array[data_array.length - 1].location, //end data
+            waypoints: waypts, //middle data
+            optimizeWaypoints: true,
+            travelMode: google.maps.TravelMode.DRIVING,
+          },
+          (response, status) => {
+            if (status === "OK" && response) {
+              directionsRenderer.setDirections(response);
+              const route = response.routes[0];
+              const summaryPanel = document.getElementById("directions-panel");
+              summaryPanel.innerHTML = "";
+
+              // For each route, display summary information.
+              for (let i = 0; i < route.legs.length; i++) {
+                // console.log(route.legs);
+                const routeSegment = i + 1;
+                summaryPanel.innerHTML += `<b>Route : ${routeSegment}</b><br>
+                  From: ${route.legs[i].start_address} <br>
+                  To: ${route.legs[i].end_address} <br>
+                  Distance: ${route.legs[i].distance.text} <br>
+                  Duration: ${route.legs[i].duration.text} <br><br>`;
+
+              }
+            } else {
+              window.alert("Directions request failed due to " + status);
+            }
+          }
+        );
+      }
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+    <div id="right-panel">
+      <div>
+        <input type="submit" id="submit" />
+      </div>
+      <div id="directions-panel"></div>
+    </div>
+
+    <!-- Async script executes immediately and must be after any DOM elements used in callback. -->
+    <!-- AIzaSyAgnRjPFj64J5tZWcdIIolWTMZeBR1KReI -->
+    <script
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgnRjPFj64J5tZWcdIIolWTMZeBR1KReI&callback=initMap"
+      async
+    ></script>
+  </body>
+</html>
